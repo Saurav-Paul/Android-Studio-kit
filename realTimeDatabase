@@ -22,6 +22,7 @@ public class realTimeDataBaseTest extends AppCompatActivity {
         //Inserting data to database
         /*
         db=FirebaseDatabase.getInstance().getReference().child("DataTest");
+        //custom class DataTest
         DataTest dt = new DataTest("Saurav","saurav@gmail.com");
         for (int i=0;i<4;i++)
         db.push().setValue(dt);
