@@ -1,0 +1,29 @@
+
+                LayoutInflater inflater=LayoutInflater.from(profileActivity.this);
+                View view=inflater.inflate(R.layout.custom_layout,null);
+                AlertDialog.Builder alertdialog= new AlertDialog.Builder(profileActivity.this);
+                alertdialog.setView(view);
+                alertdialog.setCancelable(false);
+                alertdialog.setPositiveButton("Save", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                       EditText name3, age3;
+                       name3=findViewById(R.id.inputname);
+                       age3=findViewById(R.id.inputage);
+                        TextView newname, newage;
+                        newname=findViewById(R.id.name);
+                        newage=findViewById(R.id.age);
+                        newname.setText(name3.getText().toString());
+                        newage.setText(age3.getText().toString());
+                    }
+                });
+                alertdialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+                alertdialog.create();
+                alertdialog.show();
+
+         
